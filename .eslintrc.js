@@ -31,6 +31,8 @@ module.exports = defineConfig({
   ],
   // ↓自定义规则配置
   rules: {
+    // 禁止在标签里面注释
+    'vue/comment-directive': 'off',
     'vue/script-setup-uses-vars': 'error',
     // ↓禁止使用@ts-ignore来消除ESLint检查
     '@typescript-eslint/ban-ts-ignore': 'off',
