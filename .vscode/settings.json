@@ -134,5 +134,6 @@
     "sider",
     "pnpm",
     "antd"
-  ]
+  ],
+  "less.lint.unknownAtRules": "ignore"
 }

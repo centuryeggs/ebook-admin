@@ -1,10 +1,10 @@
 <template>
-  <div class="login">
-    <div class="left">
-      <img src="./../../assets/images/login-books.png" alt="" />
+  <div class="flex bg-[#2b3144] h-full">
+    <div class="flex items-center justify-center w-full h-full basis-1/2">
+      <img class="w-60" src="./../../assets/images/login-books.png" alt="" />
     </div>
-    <div class="right">
-      <div class="login-title">登陆</div>
+    <div class="flex items-center justify-center w-full h-full basis-1/2">
+      <h1 class="text-3xl font-bold">登陆</h1>
     </div>
   </div>
 </template>
@@ -16,16 +16,3 @@ export default defineComponent({
   data() {},
 })
 </script>
-
-<style lang="sass" scoped>
-.login
-  height: 100%
-  width: 100%
-  background-color: #2b3144
-  display: flex
-  justify-content: space-between
-  align-items: center
-  .left
-    img
-      width: 250px
-</style>
