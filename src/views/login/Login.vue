@@ -1,10 +1,11 @@
 <template>
   <div class="flex bg-[#2b3144] h-full">
-    <div class="flex items-center justify-center w-full h-full basis-1/2">
+    <div class="items-center justify-center hidden w-full h-full basis-1/2 xl:flex xl:flex-col">
       <img class="w-60" src="./../../assets/images/login-books.png" alt="" />
+      <h1 class="text-3xl font-bold text-white">电子书后台管理系统</h1>
     </div>
-    <div class="flex items-center justify-center w-full h-full basis-1/2">
-      <h1 class="text-3xl font-bold">登陆</h1>
+    <div class="items-center justify-center w-full h-full basis-1/2 xl:flex xl:flex-col">
+      <h1 class="text-3xl font-bold text-white">登陆</h1>
     </div>
   </div>
 </template>
