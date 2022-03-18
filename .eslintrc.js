@@ -88,8 +88,10 @@ module.exports = defineConfig({
     'vue/multiline-html-element-content-newline': 'off',
     // ↓在单行元素的内容之前和之后需要换行
     'vue/singleline-html-element-content-newline': 'off',
-    // ↓在模板中的自定义组件上实施属性命名样式
+    // ↓vue组件 属性 命名是否需要使用连字符连接的方式
     'vue/attribute-hyphenation': 'off',
+    // ↓vue组件 事件 命名是否需要使用连字符连接的方式
+    'vue/v-on-event-hyphenation': 'off',
     // ↓需要道具的默认值
     'vue/require-default-prop': 'off',
     // ↓
