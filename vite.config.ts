@@ -3,6 +3,8 @@ import { loadEnv } from 'vite'
 import { resolve } from 'path'
 import { wrapperEnv } from './build/utils'
 import vue from '@vitejs/plugin-vue'
+import Components from 'unplugin-vue-components/vite'
+import { AntDesignVueResolver } from 'unplugin-vue-components/resolvers'
 
 function pathResolve(dir: string) {
   return resolve(process.cwd(), '.', dir)
@@ -56,6 +58,11 @@ export default ({ command, mode }: ConfigEnv): UserConfig => {
       brotliSize: false,
       chunkSizeWarningLimit: 2000,
     },
-    plugins: [vue()],
+    plugins: [
+      vue(),
+      Components({
+        resolvers: [AntDesignVueResolver()],
+      }),
+    ],
   }
 }
