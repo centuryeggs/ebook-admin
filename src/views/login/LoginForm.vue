@@ -34,7 +34,9 @@
 <script setup lang="ts">
   import { reactive, ref } from 'vue'
   import type { RuleObject } from 'ant-design-vue/lib/form'
+  import { useUserStore } from '/@/store/modules/user'
 
+  const userStore = useUserStore()
   interface FormState {
     username: string
     password: string
@@ -65,6 +67,7 @@
     console.log('Failed:', errorInfo)
   }
   async function handleLogin() {
-    loading.value = true
+    // loading.value = true
+    userStore.login()
   }
 </script>
