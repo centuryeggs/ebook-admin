@@ -1,6 +1,7 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
+import type { App } from 'vue'
 
-const router = createRouter({
+export const router = createRouter({
   history: createWebHashHistory(),
   routes: [
     {
@@ -14,4 +15,6 @@ const router = createRouter({
   ],
 })
 
-export default router
+export function setupRouter(app: App<Element>) {
+  app.use(router)
+}
