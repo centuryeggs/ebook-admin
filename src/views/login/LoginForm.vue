@@ -43,14 +43,14 @@
   }
   const formState = reactive<FormState>({
     username: 'admin',
-    password: 'adminadmin',
+    password: 'admin',
   })
   const loading = ref(false)
   let validatePass = async (_rule: RuleObject, value: string) => {
     if (value === '') {
       return Promise.reject('请输入密码!')
-    } else if (value.length < 8) {
-      return Promise.reject('密码不可少于8位!')
+    } else if (value.length < 5) {
+      return Promise.reject('密码不可少于5位!')
     } else {
       return Promise.resolve()
     }
@@ -66,8 +66,8 @@
   const onFinishFailed = (errorInfo: any) => {
     console.log('Failed:', errorInfo)
   }
-  async function handleLogin() {
+  function handleLogin() {
     // loading.value = true
-    userStore.login()
+    userStore.login(formState)
   }
 </script>
